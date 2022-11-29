@@ -1,13 +1,28 @@
 import styles from './Card.module.css'
 
-export default function Card({
+type CardProps = {
+  /**
+   * Content/markup to pass into the card
+   */
+  children: React.ReactNode,
+  /**
+   * Url for the card to link to
+   */
+  link: string,
+  /**
+   * Featured style for the card
+   */
+  featured?: boolean,
+}
+
+// export const Button = ({
+export const Card = ({
   children,
   link,
-}: {
-  children: React.ReactNode,
-  link: string,
-}) {
+  featured = false,
+}: CardProps) => {
   return <a href={link} className={styles.card}>
     {children}
+    {featured ? "!!!" : ''}
   </a>
 }
