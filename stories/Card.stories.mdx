@@ -1,6 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { Card } from '../components/Card.tsx';
-import { Button } from './Button'
+import Button from '../components/Button.tsx'
 
 <Meta link="/foo" component={Card} />
 
@@ -16,7 +16,10 @@ Some intro text for this story.
     args={{ 
       link: '/my-page',
       featured: false,
-      children: <Button size="small" label="Button" />,
+      children: <>
+        <h3>Heading</h3>
+        <Button size="small">Button</Button>
+      </>,
     }}
   >
     {(args) => <Card {...args} />}
@@ -27,7 +30,10 @@ Some intro text for this story.
     args={{
       link:'/my-page',
       featured: true,
-      children: <Button size="small" label="Featured Button" />
+      children: <>
+        <h3>Heading</h3>
+        <Button size="small">Button</Button>
+      </>,
     }}
   >
     {(args) => <Card {...args} />}
