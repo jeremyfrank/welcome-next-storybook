@@ -15,7 +15,6 @@ type CardProps = {
   featured?: boolean,
 }
 
-// export const Button = ({
 export const Card = ({
   children,
   link,
