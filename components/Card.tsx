@@ -25,3 +25,5 @@ export const Card = ({
     {featured ? "!!!" : ''}
   </a>
 }
+
+export default Card
